@@ -12,7 +12,7 @@ connecting_bg_color=$(get_tmux_option "@nordvpn_connecting_bg_color")
 connected_bg_color=$(get_tmux_option "@nordvpn_connected_bg_color")
 
 print_nordvpn_status_color() {
-    status=$(nordvpn status | sed -n -e 's/^Status: \(.*\)/\1/p')
+    status=$(nordvpn status | sed -n -e 's/Status: \(.*\)/\1/p')
 
     if [[ $status == "Disconnected" ]]; then
         echo "#[bg=${disconnected_bg_color}]#[fg=${disconnected_fg_color}]"

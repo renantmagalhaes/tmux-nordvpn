@@ -24,9 +24,9 @@ placeholders=(
 do_interpolation() {
   local interpolated="$1"
 
-  for i in ${!commands[@]} ; do
-    interpolated=${interpolated/${placeholders[$i]}/${commands[$i]}}
-  done
+  # for i in ${!commands[@]} ; do
+    # interpolated=${interpolated/${placeholders[$i]}/${commands[$i]}}
+  # done
 
   echo "$interpolated"
 }
